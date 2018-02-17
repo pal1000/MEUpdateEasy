@@ -29,7 +29,7 @@ if '%errorlevel%' NEQ '0' (
     CD /D "%~dp0"
 :--------------------------------------
 set fwupdate=FWUpdLcl
-if %PROCESSOR_ARCHITECTURE%==AMD64 set fwupdate=%fwupdate%64
+if "%PROCESSOR_ARCHITECTURE%"=="AMD64" set fwupdate=%fwupdate%64
 set fwupdate=%fwupdate%.exe
 
 echo Easy launcher for Intel ME Firmware update tool (FWUpdate)
